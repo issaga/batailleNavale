@@ -43,5 +43,9 @@ public class Joueur {
 	 public String getNameJoueur(){
 		 return nomJoueur;
 		 }
+	
+	 public void test(){
+		 String msg = "Ce n'est q'un test !!";
+	 }
 	 
 }
