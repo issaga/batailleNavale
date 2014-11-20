@@ -87,11 +87,9 @@ public boolean Placementnavire(Navire navire,int i1,int j1,int i2,int j2,int i3,
 	public boolean Placementnavire(Navire navire,int i1,int j1,int i2,int j2,int i3,int j3,int i4,int j4,int i5,int j5){
 		
 		if((this.grille[i1][j1].etat)||(this.grille[i2][j2].etat)||(this.grille[i3][j3].etat)||(this.grille[i4][j4].etat)||(this.grille[i5][j5].etat)){
-			
 			return false;
-			}
+			   }
 		else{
-
 			this.setcase(navire,i1,j1);
 			this.setcase(navire,i2,j2);
 
@@ -99,7 +97,6 @@ public boolean Placementnavire(Navire navire,int i1,int j1,int i2,int j2,int i3,
 			this.setcase(navire,i4,j4);
 			this.setcase(navire, i5, j5);
 			return true;
-			
 		}
 		
 	}

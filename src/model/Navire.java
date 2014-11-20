@@ -9,17 +9,19 @@ public abstract class Navire {
 	private String nomNavire;
 	private InfosBateau infosNav; // coordonnées de type (A6,A10)... 
 	private Rectangle navire;
-	
+	private int taille;
 	/*
 	 * Concerne la methode coulée
 	 * */
 	public int life;
 	private boolean coule = false;
 		
-	public Navire(InfosBateau infosNav){
+	public Navire(InfosBateau infosNav,int t){
 		this.nomNavire = infosNav.getNameNav();
 		this.infosNav = infosNav;
-		this.life = infosNav.getListeCases().size();
+		//this.life = infosNav.getListeCases().size();
+		this.taille=t;
+		
 		
 		if(infosNav.getOrientation().equals("vertical")){
 			
@@ -28,6 +30,18 @@ public abstract class Navire {
 		}
 	}
 	
+	
+
+	public int getTaille() {
+		return taille;
+	}
+
+
+
+	public boolean isCoule() {
+		return coule;
+	}
+
 	public void dessinerNavire(Graphics2D g){ 
 		g.setColor(Color.red);
 		g.draw(navire);
